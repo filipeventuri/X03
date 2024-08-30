@@ -5,7 +5,6 @@ const connection = require("./database/db.js");
 const textController = require("./text/textController.js");
 const texts = require("./text/text.js");
 
-
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:false}));
