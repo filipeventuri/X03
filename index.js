@@ -28,11 +28,7 @@ app.get("/print", (req,res)=>{
     
 });
 
-connection.authenticate().then(()=>{
-    console.log("Database acessed")
-}).catch((err)=>{
-    console.log("err: " + err);
-})
+connection.sync();
 
 const PORT = process.env.PORT || 3000;
 
