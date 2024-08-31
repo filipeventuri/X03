@@ -1,0 +1,55 @@
+<%- include ("../partials/header.ejs") %>
+<%- include ("../partials/navbar.ejs")%>
+<div class="swiper">
+    
+    <div class="swiper-wrapper">
+     
+      <div class="swiper-slide" style="background-image: url(/img/0.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/1.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/2.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/3.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/4.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/5.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/6.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/7.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/8.jpeg)"></div>
+      <div class="swiper-slide" style="background-image: url(/img/9.jpeg)"></div>
+
+      
+    </div>
+    
+    <div class="swiper-pagination"></div>
+  
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+
+    <div class="swiper-scrollbar"></div>
+  </div>
+  
+  <%- include ("../partials/footer.ejs") %>
+  
+  <script>
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  </script>
