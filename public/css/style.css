@@ -29,45 +29,6 @@ body {
     justify-content: space-around;
   }
   
-  .projects {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .project {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 30%;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .project h2 {
-    margin-top: 0;
-    color: #004080;
-  }
-  
-  .project p {
-    margin: 10px 0 20px;
-    color: #666;
-  }
-  
-  .project a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #004080;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .project a:hover {
-    background-color: #003366;
-  }
-  
   footer {
     background-color: #004080;
     color: white;
@@ -79,8 +40,7 @@ body {
   }
 
   .swiper {
-    width: 100vw;
-    height: 100vh;
+    margin-top: 15vh;
   }
 
   .swiper-slide {
