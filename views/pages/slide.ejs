@@ -3,6 +3,7 @@
 <div class="container  swiper">
     
     <div class="swiper-wrapper">
+<button id="fullscreenBtn" class=btn btn-primary">Tela Cheia<button/>
      
       <div class="swiper-slide " ><img src="/img/0.jpeg" class="img-fluid" ></div>
       <div class="swiper-slide" ><img src="/img/1.jpeg" class="img-fluid" ></div>
@@ -54,3 +55,57 @@
     },
   });
   </script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+   
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const swiperContainer = document.querySelector('.swiper');
+
+    fullscreenBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            if (swiperContainer.requestFullscreen) {
+                swiperContainer.requestFullscreen();
+            } else if (swiperContainer.mozRequestFullScreen) { // Para Firefox
+                swiperContainer.mozRequestFullScreen();
+            } else if (swiperContainer.webkitRequestFullscreen) { // Para Chrome, Safari e Opera
+                swiperContainer.webkitRequestFullscreen();
+            } else if (swiperContainer.msRequestFullscreen) { // Para IE/Edge
+                swiperContainer.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { // Para Firefox
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { // Para Chrome, Safari e Opera
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // Para IE/Edge
+                document.msExitFullscreen();
+            }
+        }
+    });
+
+
+    document.addEventListener('fullscreenchange', (event) => {
+        if (document.fullscreenElement) {
+            swiperContainer.classList.add('fullscreen');
+        } else {
+            swiperContainer.classList.remove('fullscreen');
+        }
+    });
+</script>
+
